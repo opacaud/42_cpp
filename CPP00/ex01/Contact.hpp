@@ -45,7 +45,6 @@ class Contact
         void        ft_set_nickname(std::string nickname);
         void        ft_set_number(std::string number);
         void        ft_set_secret(std::string secret);
-
         std::string ft_get_f_name();
         std::string ft_get_l_name();
         std::string ft_get_nickname();

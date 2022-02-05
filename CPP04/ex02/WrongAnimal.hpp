@@ -44,7 +44,7 @@ class WrongAnimal
 		WrongAnimal & operator=(WrongAnimal const & WrongAnimalACopier);
 		
 		std::string		getType() const;
-		virtual void	makeSound() const;
+		void			makeSound() const;
 
 	protected :
 
