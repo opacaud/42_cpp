@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 16:20:59 by opacaud           #+#    #+#             */
-/*   Updated: 2022/02/03 15:29:58 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:13:14 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,9 @@ int main()
 		i++;
 	}
 
-	std::cout << std::endl << RED << "-------------------------------------------" << RESET << std::endl << std::endl;
+	std::cout << std::endl << BOLDMAGENTA << "-------------------------------------------------" << RESET << std::endl << std::endl;
+
+	std::cout << MAGENTA << "Proof that half is dog and the other half is cat from Animal:" << RESET << std::endl << std::endl;
 
 	i = 0;
 	while (i < nb_of_animals)
@@ -60,15 +62,15 @@ int main()
 		i++;
 	}
 
-	std::cout << RED << std::endl << "-------------------------------------------" << RESET << std::endl << std::endl;
+	std::cout << std::endl << BOLDMAGENTA << "-------------------------------------------------" << RESET << std::endl << std::endl;
 
 	*array[1] = *array[0];
 
-	std::cout << std::endl << "Proof of deep copy through the addresses of the brains:" << std::endl << std::endl;
+	std::cout << std::endl << MAGENTA << "Proof of deep copy through the addresses of the brains:" << RESET << std::endl << std::endl;
 	std::cout << "Address of array[0]->Brain: " << array[0]->getBrain() << std::endl;
 	std::cout << "Address of array[1]->Brain: " << array[1]->getBrain() << std::endl;
 
-	std::cout << RED << std::endl << "-------------------------------------------" << RESET << std::endl << std::endl;
+	std::cout << std::endl << BOLDMAGENTA << "-------------------------------------------------" << RESET << std::endl << std::endl;
 
 	i = 0;
 	while (i < nb_of_animals)

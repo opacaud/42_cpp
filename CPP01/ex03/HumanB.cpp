@@ -27,9 +27,9 @@ HumanB::~HumanB()
 void    HumanB::attack()
 {
     if (m_weapon == NULL)
-        std::cout << m_name << " attacks with his bare hands" << std::endl;
+        std::cout << BOLDMAGENTA << m_name << " attacks with his bare hands" << RESET << std::endl;
     else
-        std::cout << m_name << " attacks with his " << m_weapon->getType() << std::endl;
+        std::cout << BOLDMAGENTA << m_name << " attacks with his " << m_weapon->getType() << RESET << std::endl;
 }
 
 void    HumanB::setWeapon(Weapon &weapon)

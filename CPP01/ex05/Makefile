@@ -12,24 +12,31 @@
 
 NAME =		karen
 
-CC =		c++
+OBJ_DIR =	obj
 
-FLAGS =		-Wall -Wextra -Werror -std=c++98
+CXX =		c++
+
+CFLAGS =	-Wall -Wextra -Werror -std=c++98
+
+DEPFLAGS =	-MMD -MP
 
 SRC =		main.cpp Karen.cpp
 
-OBJ =		${SRC:.cpp=.o}
+OBJ =		${addprefix ${OBJ_DIR}/,${SRC:.cpp=.o}}
+
+DEP =		${OBJ:.o=.d}
 
 all:		${NAME}
 
 ${NAME}:	${OBJ}
-			${CC} ${FLAGS} ${OBJ} -o ${NAME}
+			${CXX} ${CFLAGS} ${DEPFLAGS} ${OBJ} -o ${NAME}
 
-.cpp.o:
-			${CC} ${FLAGS} -c $< -o $@
+${OBJ_DIR}/%.o:%.cpp
+			@mkdir -p ${@D}
+			${CXX} ${CFLAGS} ${DEPFLAGS} -c $< -o $@
 
 clean:
-			rm -f ${OBJ}
+			rm -rf ${OBJ_DIR}
 
 fclean:		clean
 			rm -f ${NAME}
@@ -37,3 +44,5 @@ fclean:		clean
 re:			fclean all
 
 .PHONY :	all clean fclean re
+
+-include	${DEP}

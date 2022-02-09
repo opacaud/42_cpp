@@ -64,5 +64,5 @@ void    ScavTrap::attack(std::string const & target)
 
 void    ScavTrap::guardGate()
 {
-    std::cout << "SCAVTRAP " << m_name << " has entered in Gate keeper mode." << std::endl;
+    std::cout << BOLDYELLOW << "SCAVTRAP " << m_name << " has entered in Gate keeper mode." << RESET << std::endl;
 }

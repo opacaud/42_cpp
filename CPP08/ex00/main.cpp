@@ -31,7 +31,7 @@ int main()
 
     try
     {
-        std::cout << YELLOW << "easyfind(vec, 1)" << RESET << std::endl;
+        std::cout << BOLDYELLOW << "easyfind(vec, 1)" << RESET << std::endl;
         it = easyfind(vec, 1);
         std::cout << BOLDGREEN << "Found. iterator: " << *it << RESET << std::endl << std::endl;
     }
@@ -42,7 +42,7 @@ int main()
 
     try
     {
-        std::cout << YELLOW << "easyfind(vec, 8)" << RESET << std::endl;
+        std::cout << BOLDYELLOW << "easyfind(vec, 8)" << RESET << std::endl;
         it = easyfind(vec, 8);
         std::cout << BOLDGREEN << "Found. iterator: " << *it << RESET << std::endl << std::endl;
     }
@@ -53,7 +53,7 @@ int main()
 
     try
     {
-        std::cout << YELLOW << "easyfind(vec, 64)" << RESET << std::endl;
+        std::cout << BOLDYELLOW << "easyfind(vec, 64)" << RESET << std::endl;
         it = easyfind(vec, 64);
         std::cout << BOLDGREEN << "Found. iterator: " << *it << RESET << std::endl << std::endl;
     }
@@ -62,13 +62,13 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
     
-    std::cout << std::endl << YELLOW << "pop_back()" << RESET << std::endl;
+    std::cout << std::endl << BOLDYELLOW << "pop_back()" << RESET << std::endl;
     vec.pop_back();
     print(vec);
 
     try
     {
-        std::cout << YELLOW << "easyfind(vec, 32)" << RESET << std::endl;
+        std::cout << BOLDYELLOW << "easyfind(vec, 32)" << RESET << std::endl;
         it = easyfind(vec, 32);
         std::cout << BOLDGREEN << "Found. iterator: " << *it << RESET << std::endl << std::endl;
     }
@@ -77,13 +77,13 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
 
-    std::cout << std::endl << YELLOW << "push_back(32)" << RESET << std::endl;
+    std::cout << std::endl << BOLDYELLOW << "push_back(32)" << RESET << std::endl;
     vec.push_back(32);
     print(vec);
 
     try
     {
-        std::cout << YELLOW << "easyfind(vec, 32)" << RESET << std::endl;
+        std::cout << BOLDYELLOW << "easyfind(vec, 32)" << RESET << std::endl;
         it = easyfind(vec, 32);
         std::cout << BOLDGREEN << "Found. iterator: " << *it << RESET << std::endl << std::endl;
     }
@@ -91,6 +91,9 @@ int main()
     {
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
+
+	std::cout << std::endl << "P.S.: Another main function has been commented in main.cpp. Uncommenting it, while commenting this one of course, will achieve the same goal but by returning an int." << std::endl << std::endl;
+
 
     return (0);
 }
@@ -116,7 +119,7 @@ int main()
 
 //     try
 //     {
-//         std::cout << YELLOW << "easyfind(vec, 1)" << RESET << std::endl;
+//         std::cout << BOLDYELLOW << "easyfind(vec, 1)" << RESET << std::endl;
 //         found = easyfind(vec, 1);
 //         std::cout << BOLDGREEN << "Found. iterator: " << found << RESET << std::endl << std::endl;
 //     }
@@ -127,7 +130,7 @@ int main()
 
 //     try
 //     {
-//         std::cout << YELLOW << "easyfind(vec, 8)" << RESET << std::endl;
+//         std::cout << BOLDYELLOW << "easyfind(vec, 8)" << RESET << std::endl;
 //         found = easyfind(vec, 8);
 //         std::cout << BOLDGREEN << "Found. iterator: " << found << RESET << std::endl << std::endl;
 //     }
@@ -138,7 +141,7 @@ int main()
 
 //     try
 //     {
-//         std::cout << YELLOW << "easyfind(vec, 64)" << RESET << std::endl;
+//         std::cout << BOLDYELLOW << "easyfind(vec, 64)" << RESET << std::endl;
 //         found = easyfind(vec, 64);
 //         std::cout << BOLDGREEN << "Found. iterator: " << found << RESET << std::endl << std::endl;
 //     }
@@ -147,13 +150,13 @@ int main()
 //         std::cout << BOLDRED << e.what() << RESET << std::endl;
 //     }
     
-//     std::cout << std::endl << YELLOW << "pop_back()" << RESET << std::endl;
+//     std::cout << std::endl << BOLDYELLOW << "pop_back()" << RESET << std::endl;
 //     vec.pop_back();
 //     print(vec);
 
 //     try
 //     {
-//         std::cout << YELLOW << "easyfind(vec, 32)" << RESET << std::endl;
+//         std::cout << BOLDYELLOW << "easyfind(vec, 32)" << RESET << std::endl;
 //         found = easyfind(vec, 32);
 //         std::cout << BOLDGREEN << "Found. iterator: " << found << RESET << std::endl << std::endl;
 //     }
@@ -162,13 +165,13 @@ int main()
 //         std::cout << BOLDRED << e.what() << RESET << std::endl;
 //     }
 
-//     std::cout << std::endl << YELLOW << "push_back(32)" << RESET << std::endl;
+//     std::cout << std::endl << BOLDYELLOW << "push_back(32)" << RESET << std::endl;
 //     vec.push_back(32);
 //     print(vec);
 
 //     try
 //     {
-//         std::cout << YELLOW << "easyfind(vec, 32)" << RESET << std::endl;
+//         std::cout << BOLDYELLOW << "easyfind(vec, 32)" << RESET << std::endl;
 //         found = easyfind(vec, 32);
 //         std::cout << BOLDGREEN << "Found. iterator: " << found << RESET << std::endl << std::endl;
 //     }

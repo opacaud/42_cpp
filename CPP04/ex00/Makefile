@@ -20,7 +20,7 @@ CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 DEPFLAGS =	-MMD -MP
 
-SRC =		Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
+SRC =		main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ =		${addprefix ${OBJ_DIR}/,${SRC:.cpp=.o}}
 

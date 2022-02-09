@@ -14,13 +14,13 @@ NAME =		convert
 
 OBJ_DIR =	obj
 
-CXX =		clang++
+CXX =		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 DEPFLAGS =	-MMD -MP
 
-SRC =		Convert.cpp check.cpp utils.cpp main.cpp
+SRC =		main.cpp Convert.cpp check.cpp utils.cpp
 
 OBJ =		${addprefix ${OBJ_DIR}/,${SRC:.cpp=.o}}
 

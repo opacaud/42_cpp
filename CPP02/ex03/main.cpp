@@ -25,10 +25,23 @@ int main()
     Point f(Fixed(0), Fixed(0));
     Point g(Fixed(0), Fixed(0.1f));
 
-    std::cout << bsp(a, b, c, d) << std::endl;
-    std::cout << bsp(a, b, c, e) << std::endl;
-    std::cout << bsp(a, b, c, f) << std::endl;
-    std::cout << bsp(a, b, c, g) << std::endl;
+    int res;
+
+    std::cout << std::endl << BOLDGREEN << "Point is in the triangle" << RESET << std::endl;
+    res = bsp(a, b, c, d);
+    std::cout << BOLDBLUE << "BSP function returns: " << RESET << BOLDGREEN << res << RESET << std::endl << std::endl;
+
+    std::cout << BOLDRED << "Point is NOT in the triangle" << RESET << std::endl;
+    res = bsp(a, b, c, e);
+    std::cout << BOLDBLUE << "BSP function returns: " << RESET << BOLDRED << res << RESET << std::endl << std::endl;
+
+    std::cout << BOLDRED << "Point is on a side so NOT in the triangle" << RESET << std::endl;
+    res = bsp(a, b, c, f);
+    std::cout << BOLDBLUE << "BSP function returns: " << RESET << BOLDRED << res << RESET << std::endl << std::endl;
+
+    std::cout << BOLDGREEN << "Point is just in the triangle" << RESET << std::endl;
+    res = bsp(a, b, c, g);
+    std::cout << BOLDBLUE << "BSP function returns: " << RESET << BOLDGREEN << res << RESET << std::endl << std::endl;
 
     return (0);
 }

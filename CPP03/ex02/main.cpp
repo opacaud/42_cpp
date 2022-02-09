@@ -20,7 +20,7 @@ int main()
     ScavTrap Charles("Charles");
     FragTrap Francis("Francis");
 
-    std::cout << std::endl << "--------------------------------CLAPTRAP--------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "--------------------------------CLAPTRAP--------------------------------" << RESET << std::endl << std::endl;
 
     std::cout << "Alain's hit points count at the beginning are: " << Alain.get_hitPoints() << std::endl;
 
@@ -34,7 +34,7 @@ int main()
 
     std::cout << "Alain's hit points count after repairing damage are: " << Alain.get_hitPoints() << std::endl;
     
-    std::cout << std::endl << "--------------------------------SCAVTRAP--------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "--------------------------------SCAVTRAP--------------------------------" << RESET << std::endl << std::endl;
 
     std::cout << "Charles' hit points count at the beginning are: " << Charles.get_hitPoints() << std::endl;
 
@@ -50,7 +50,7 @@ int main()
 
     Charles.guardGate();
 
-    std::cout << std::endl << "--------------------------------FRAGTRAP--------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "--------------------------------FRAGTRAP--------------------------------" << RESET << std::endl << std::endl;
 
     std::cout << "Francis' hit points count at the beginning are: " << Francis.get_hitPoints() << std::endl;
 
@@ -66,7 +66,7 @@ int main()
 
     Francis.highFivesGuys();
 
-    std::cout << std::endl << "----------------------------------COPY----------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "----------------------------------COPY----------------------------------" << RESET << std::endl << std::endl;
 
     FragTrap Copy(Francis);
 
@@ -84,7 +84,7 @@ int main()
 
     Copy.highFivesGuys();
 
-    std::cout << std::endl << "------------------------------THE END------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "------------------------------THE END------------------------------" << RESET << std::endl << std::endl;
 
     return (0);
 }

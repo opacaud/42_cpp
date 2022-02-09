@@ -16,7 +16,7 @@ void	addManyNumbers(std::vector<int> vec, unsigned int quantity);
 
 int main()
 {
-	std::cout << BOLDBLUE << std::endl << "---------------------MAIN TEST DU SUJET---------------------" << RESET << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "---------------------MAIN TEST DU SUJET---------------------" << RESET << std::endl;
 
     Span sp = Span(5);
     sp.addNumber(6);
@@ -27,7 +27,7 @@ int main()
     std::cout << std::endl << sp.shortestSpan() << std::endl;
     std::cout << sp.longestSpan() << std::endl;
 
-	std::cout << BOLDBLUE << std::endl << "--------------------------CREATION--------------------------" << RESET << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "--------------------------CREATION--------------------------" << RESET << std::endl;
 
     Span sp1(3);
 
@@ -67,7 +67,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
 
-	std::cout << BOLDBLUE << std::endl << "------------------------LONGEST SPAN------------------------" << RESET << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "------------------------LONGEST SPAN------------------------" << RESET << std::endl;
 
     std::cout << std::endl << sp1;
 
@@ -158,7 +158,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
 
-	std::cout << BOLDBLUE << std::endl << "-----------------------SHORTEST  SPAN-----------------------" << RESET << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "-----------------------SHORTEST  SPAN-----------------------" << RESET << std::endl;
 
     std::cout << std::endl << sp1;
 
@@ -238,7 +238,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
 
-	std::cout << BOLDBLUE << std::endl << "-------------------------FILL  SPAN-------------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "-------------------------FILL  SPAN-------------------------" << RESET << std::endl << std::endl;
 
     Span sp7;
 
@@ -332,7 +332,11 @@ int main()
 
     std::cout << sp9;
 
+    int uncomment = 0;
+
     // UNCOMMENT EVERYTHING BELLOW TO ADD A TEST FILLING THE WHOLE SPAN (15000 INT) WITH RANDOM NUMBERS AND THEN TRYING TO ADD ONE MORE
+
+    // uncomment = 1;
 
     // std::cout << std::endl << "-----------------" << std::endl << std::endl;
 
@@ -362,7 +366,10 @@ int main()
     //     std::cout << BOLDRED << e.what() << RESET << std::endl;
     // }
 
-	std::cout << BOLDBLUE << std::endl << "--------------------------THE  END--------------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "--------------------------THE  END--------------------------" << RESET << std::endl << std::endl;
+
+    if (uncomment == 0)
+    	std::cout << "P.S.: There is a whole section at the end of the main function that you can uncomment to see how span is working with a large amount of numbers (15000 here)." << std::endl << std::endl;
 
     return (0);
 }

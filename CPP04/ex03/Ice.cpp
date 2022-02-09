@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 09:59:26 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/25 09:38:07 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:18:07 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ AMateria* Ice::clone() const
 
 void Ice::use(ICharacter& target)
 {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	std::cout << BOLDRED << "* shoots an ice bolt at " << target.getName() << " *" << RESET << std::endl;
 }

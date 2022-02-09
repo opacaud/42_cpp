@@ -31,6 +31,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), ScavTrap(name), Fra
     m_hitPoints = FragTrap::m_frag_hitPoints;        // 100
     m_energyPoints = ScavTrap::m_scav_energyPoints;  // 50
     m_attackDamage = FragTrap::m_frag_attackDamage;  // 30
+
     // std::cout << "m_name: " << m_name << std::endl;
     // std::cout << "m_hit: " << m_hitPoints << std::endl;
     // std::cout << "m_energy: " << m_energyPoints << std::endl;
@@ -41,6 +42,7 @@ DiamondTrap::DiamondTrap(DiamondTrap const & DiamondTrapACopier) : ClapTrap(Diam
 {
     std::cout << BLUE << "Assignation operator for DiamondTrap called." << RESET << std::endl;
     *this = DiamondTrapACopier;
+
     // std::cout << "m_name: " << m_name << std::endl;
     // std::cout << "m_hit: " << m_hitPoints << std::endl;
     // std::cout << "m_energy: " << m_energyPoints << std::endl;
@@ -74,6 +76,6 @@ void    DiamondTrap::attack(std::string const & target)
 
 void    DiamondTrap::whoAmI()
 {
-    std::cout << "Hey! My name is " << m_name;
-    std::cout << " and my ClapTrap name is " << ClapTrap::m_name << "!" << std::endl;
+    std::cout << BOLDMAGENTA << "Hey! My name is " << m_name << RESET ;
+    std::cout << BOLDMAGENTA << " and my ClapTrap name is " << ClapTrap::m_name << "!" << RESET << std::endl;
 }

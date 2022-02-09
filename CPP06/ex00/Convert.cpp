@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 10:20:26 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/31 08:53:46 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:33:40 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,7 +198,7 @@ void	Convert::print()
 {
 	// std::cout << *this << std::endl;
 
-	std::cout << "char: ";
+	std::cout << BOLDYELLOW << "char: " << RESET;
 	if (getCharFlag() == "impossible")
 		std::cout << "impossible" << std::endl;
 	else if (m_char < 32 || m_char == 127)
@@ -207,14 +207,14 @@ void	Convert::print()
 	 	std::cout << "'" << static_cast<char>(m_char) << "'" << std::endl;
 
 
-	std::cout << "int: ";
+	std::cout << BOLDCYAN << "int: " << RESET;
 	if (getIntFlag() == "impossible")
 		std::cout << "impossible" << std::endl;
 	else
 		std::cout << static_cast<int>(m_int) << std::endl;
 
 
-	std::cout << "float: ";
+	std::cout << BOLDBLUE << "float: " << RESET;
 	if (getFloatFlag() == "no")
 	{
 		std::cout << static_cast<float>(m_float);
@@ -227,7 +227,7 @@ void	Convert::print()
 		std::cout << getFloatFlag() << std::endl;
 
 	
-	std::cout << "double: ";
+	std::cout << BOLDMAGENTA << "double: " << RESET;
 	if (getDoubleFlag() == "no")
 	{
 		std::cout << static_cast<double>(m_double);

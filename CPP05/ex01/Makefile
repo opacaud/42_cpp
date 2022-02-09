@@ -14,13 +14,15 @@ NAME =		bureaucrat
 
 OBJ_DIR =	obj
 
-CXX =		clang++
+CXX =		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 DEPFLAGS =	-MMD -MP
 
-SRC =		Bureaucrat.cpp Form.cpp main.cpp
+SRC =		main.cpp \
+			Bureaucrat.cpp \
+			Form.cpp
 
 OBJ =		${addprefix ${OBJ_DIR}/,${SRC:.cpp=.o}}
 

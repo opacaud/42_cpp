@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 16:20:59 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/25 10:19:31 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:18:42 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int main()
 
 	ICharacter* bob = new Character("bob");
 
+	std::cout << std::endl;
 	me->use(0, *bob);
 	std::cout << std::endl;
 	me->use(1, *bob);
@@ -42,7 +43,7 @@ int main()
 	delete me;
 	delete src;
 
-	std::cout << std::endl << RED << "-------------------------------------------" << RESET << std::endl << std::endl;
+	std::cout << std::endl << BOLDMAGENTA << "-------------------------------------------" << RESET << std::endl << std::endl;
 
 	ICharacter* charlie = new Character("charlie");
 	ICharacter* moi = new Character("moi");
@@ -69,7 +70,7 @@ int main()
 	std::cout << std::endl;
 	moi->use(3, *charlie);
 
-	std::cout << std::endl << RED << "-------------------------------------------" << RESET << std::endl << std::endl;
+	std::cout << std::endl << BOLDMAGENTA << "-------------------------------------------" << RESET << std::endl << std::endl;
 
 	AMateria* ice = new Ice();
 	source->learnMateria(ice);
@@ -83,7 +84,7 @@ int main()
 	delete charlie;
 	delete source;
 
-	std::cout << std::endl << RED << "-----------------THE END-------------------" << RESET << std::endl << std::endl;
+	std::cout << std::endl << BOLDMAGENTA << "-----------------THE END-------------------" << RESET << std::endl << std::endl;
 	
 	return (0);
 }

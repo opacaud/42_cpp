@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 11:15:25 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/27 13:36:33 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:23:13 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ const char *Form::GradeTooLowException::what() const throw()
 
 std::ostream & operator<<(std::ostream & flux, Form const & form)
 {
-    flux << std::endl << MAGENTA << "FORM PRESENTATION" << RESET << std::endl;
+    flux << std::endl << BOLDBLUE << "FORM PRESENTATION" << RESET << std::endl;
 	flux << "Name: " << form.getName() << std::endl;
 	flux << "Form is signed: ";
 	if (form.getSigned() == 0)

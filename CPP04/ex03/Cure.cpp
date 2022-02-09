@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 09:59:26 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/25 09:38:19 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:17:55 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ AMateria* Cure::clone() const
 
 void Cure::use(ICharacter& target)
 {
-	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+	std::cout << BOLDGREEN << "* heals " << target.getName() << "'s wounds *" << RESET << std::endl;
 }

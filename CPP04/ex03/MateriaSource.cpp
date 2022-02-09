@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:45:41 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/25 09:35:08 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:18:21 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void MateriaSource::learnMateria(AMateria* materia)
 		i++;
 	if (i == m_nb_in_memory)
 	{
-		std::cout << "MEMORY OF MATERIA IS FULL" << std::endl;
+		std::cout << BOLDRED << "MEMORY OF MATERIA IS FULL" << RESET << std::endl;
 		return ;
 	}
 	m_memory[i] = materia;

@@ -20,7 +20,7 @@ CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 DEPFLAGS =	-MMD -MP
 
-SRC =		AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
+SRC =		main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 
 OBJ =		${addprefix ${OBJ_DIR}/,${SRC:.cpp=.o}}
 

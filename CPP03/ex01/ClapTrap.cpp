@@ -63,18 +63,18 @@ void    ClapTrap::attack(std::string const & target)
 {
     if (m_hitPoints == 0 && m_energyPoints == 0)
     {
-        std::cout << "ClapTrap " << m_name << " cannot do anything.";
-        std::cout << " No hit points nor energy points left... :(" << std::endl;
+        std::cout << BOLDRED << "ClapTrap " << m_name << " cannot do anything." << RESET;
+        std::cout << BOLDRED << " No hit points nor energy points left... :(" << RESET << std::endl;
     }
     else if (m_hitPoints == 0)
     {
-        std::cout << "ClapTrap " << m_name << " cannot do anything.";
-        std::cout << " No hit points left... :(" << std::endl;
+        std::cout << BOLDRED << "ClapTrap " << m_name << " cannot do anything." << RESET;
+        std::cout << BOLDRED << " No hit points left... :(" << RESET << std::endl;
     }
     else if (m_energyPoints == 0)
     {
-        std::cout << "ClapTrap " << m_name << " cannot do anything.";
-        std::cout << " No energy points left... :(" << std::endl;
+        std::cout << BOLDRED << "ClapTrap " << m_name << " cannot do anything." << RESET;
+        std::cout << BOLDRED << " No energy points left... :(" << RESET << std::endl;
     }
     else
     {
@@ -89,11 +89,11 @@ void    ClapTrap::attack(std::string const & target)
 
 void    ClapTrap::takeDamage(unsigned int amount)
 {
-    std::cout << "ClapTrap " << m_name << " takes " << amount;
+    std::cout << BOLDRED << "ClapTrap " << m_name << " takes " << amount << RESET;
     if (amount == 0 || amount == 1)
-            std::cout << " point of damage!" << std::endl;
+            std::cout << BOLDRED << " point of damage!" << RESET << std::endl;
         else
-            std::cout << " points of damage!" << std::endl;
+            std::cout << BOLDRED << " points of damage!" << RESET << std::endl;
     if ((int)m_hitPoints - (int)amount >= 0)
         m_hitPoints -= amount;
     else
@@ -102,11 +102,11 @@ void    ClapTrap::takeDamage(unsigned int amount)
 
 void    ClapTrap::beRepaired(unsigned int amount)
 {
-    std::cout << "ClapTrap " << m_name << " gets " << amount;
+    std::cout << BOLDGREEN << "ClapTrap " << m_name << " gets " << amount << RESET;
     if (amount == 0 || amount == 1)
-        std::cout << " hit point back!" << std::endl;
+        std::cout << BOLDGREEN << " hit point back!" << RESET << std::endl;
     else
-        std::cout << " hit points back!" << std::endl;
+        std::cout << BOLDGREEN << " hit points back!" << RESET << std::endl;
     m_hitPoints += amount;
 }
 

@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 10:35:26 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/25 10:11:16 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:17:42 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void	Character::equip(AMateria* m)
 		i++;
 	if (i == m_nb_in_inventory)
 	{
-		std::cout << "INVENTORY IS FULL" << std::endl;
+		std::cout << BOLDRED << "INVENTORY IS FULL" << RESET << std::endl;
 		return ;
 	}
 	m_inventory[i] = m;
@@ -123,5 +123,5 @@ void	Character::use(int idx, ICharacter& target)
 	if (m_inventory[idx] && idx >=0 && idx <= 3)
 		m_inventory[idx]->use(target);
 	else if (!m_inventory[idx] && idx >=0 && idx <= 3)
-		std::cout << "Select a valid materia in inventory" << std::endl;
+		std::cout << BOLDRED << "Select a valid materia in inventory" << RESET << std::endl;
 }

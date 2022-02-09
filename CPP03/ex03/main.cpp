@@ -21,11 +21,11 @@ int main()
 
     DiamondTrap Copy(Harry);
 
-    std::cout << std::endl << "As a reminder... hitPoints should be 100 (fragtrap)" << std::endl;
+    std::cout << std::endl << BOLDGREEN << "As a reminder... hitPoints should be 100 (fragtrap)" << std::endl;
     std::cout << "                 energyPoints should be 50 (scavtrap)" << std::endl;
-    std::cout << "                 attackDamage should be 30 (fragtrap)" << std::endl;
+    std::cout << "                 attackDamage should be 30 (fragtrap)" << RESET << std::endl;
 
-    std::cout << std::endl << "------------------------------DIAMONDTRAP-------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "------------------------------DIAMONDTRAP-------------------------------" << RESET << std::endl << std::endl;
 
     std::cout << "Harry's hit points count at the beginning are: " << Harry.get_hitPoints() << std::endl;
 
@@ -45,7 +45,7 @@ int main()
 
     Harry.whoAmI();
 
-    std::cout << std::endl << "----------------------------------COPY----------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "----------------------------------COPY----------------------------------" << RESET << std::endl << std::endl;
 
     std::cout << "Harry's copy hit points count at the beginning are: " << Copy.get_hitPoints() << std::endl;
 
@@ -65,7 +65,7 @@ int main()
     
     Copy.whoAmI();
 
-    std::cout << std::endl << "------------------------------THE END------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "------------------------------THE END------------------------------" << RESET << std::endl << std::endl;
 
     return (0);
 }

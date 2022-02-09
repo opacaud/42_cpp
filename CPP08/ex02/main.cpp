@@ -40,7 +40,7 @@ void    printStack(std::stack<int> s)
 
 int main()
 {
-	std::cout << BOLDBLUE << std::endl << "-----------------------TESTS DU SUJET-----------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "-----------------------TESTS DU SUJET-----------------------" << RESET << std::endl << std::endl;
 
     MutantStack<int> mstack;
     mstack.push(5);                                         // 5
@@ -74,7 +74,7 @@ int main()
 
     printStack(s);
 
-	std::cout << BOLDBLUE << std::endl << std::endl << "-------------------------TESTS LIST-------------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << std::endl << "-------------------------TESTS LIST-------------------------" << RESET << std::endl << std::endl;
 
     std::list<int> lstack;
     lstack.push_back(5);                                   // 5
@@ -108,7 +108,7 @@ int main()
     printList(ls);
 
 
-	std::cout << BOLDBLUE << std::endl << std::endl << "--------------------------THE  END--------------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << std::endl << "--------------------------THE  END--------------------------" << RESET << std::endl << std::endl;
 
     return (0);
 }

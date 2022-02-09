@@ -18,7 +18,7 @@ int main()
     ClapTrap Alain("Alain");
     ScavTrap Charles("Charles");
 
-    std::cout << std::endl << "--------------------------------CLAPTRAP--------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "--------------------------------CLAPTRAP--------------------------------" << RESET << std::endl << std::endl;
 
     std::cout << "Alain's hit points count at the beginning are: " << Alain.get_hitPoints() << std::endl;
 
@@ -32,7 +32,7 @@ int main()
 
     std::cout << "Alain's hit points count after repairing damage are: " << Alain.get_hitPoints() << std::endl;
     
-    std::cout << std::endl << "--------------------------------SCAVTRAP--------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "--------------------------------SCAVTRAP--------------------------------" << RESET << std::endl << std::endl;
 
     std::cout << "Charles' hit points count at the beginning are: " << Charles.get_hitPoints() << std::endl;
 
@@ -48,7 +48,7 @@ int main()
 
     Charles.guardGate();
 
-    std::cout << std::endl << "----------------------------------COPY----------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "----------------------------------COPY----------------------------------" << RESET << std::endl << std::endl;
 
     ScavTrap Copy(Charles);
 
@@ -66,7 +66,7 @@ int main()
 
     Copy.guardGate();
 
-    std::cout << std::endl << "------------------------------THE END------------------------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDMAGENTA << "------------------------------THE END------------------------------" << RESET << std::endl << std::endl;
 
     return (0);
 }

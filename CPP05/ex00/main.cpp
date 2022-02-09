@@ -14,7 +14,7 @@
 
 int main()
 {  
-	std::cout << BOLDGREEN << std::endl << "-------------------BASIC  TESTS-------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "-------------------BASIC  TESTS-------------------" << RESET << std::endl << std::endl;
 
     try
     {
@@ -48,7 +48,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
 
-	std::cout << BOLDGREEN << std::endl << "-------------------WRONG  TESTS-------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "-------------------WRONG  TESTS-------------------" << RESET << std::endl << std::endl;
 
     try
     {
@@ -71,7 +71,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
 
-	std::cout << BOLDGREEN << std::endl << "-----------------RIGHT EVOLUTIONS-----------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "-----------------RIGHT EVOLUTIONS-----------------" << RESET << std::endl << std::endl;
 
     try
     {
@@ -98,7 +98,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
 
-	std::cout << BOLDGREEN << std::endl << "-----------------WRONG EVOLUTIONS-----------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "-----------------WRONG EVOLUTIONS-----------------" << RESET << std::endl << std::endl;
 
     try
     {
@@ -125,7 +125,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
     }
 
-	std::cout << BOLDGREEN << std::endl << "---------------------THE  END---------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "---------------------THE  END---------------------" << RESET << std::endl << std::endl;
 
     return (0);
 }

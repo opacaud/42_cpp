@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 12:00:47 by opacaud           #+#    #+#             */
-/*   Updated: 2022/02/01 08:37:00 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:45:51 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	std::cout << BOLDRED << std::endl << "--------------------------CREATION--------------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "--------------------------CREATION--------------------------" << RESET << std::endl << std::endl;
 
 	Array<int> array;
 
@@ -46,9 +46,9 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
 	}
 
-	std::cout << BOLDRED << std::endl << "----------------------SET AVEC SETTERS----------------------" << RESET;
-	std::cout << BOLDRED << std::endl << "|                            &&                            |" << RESET;
-	std::cout << BOLDRED << std::endl << "----------------------GET AVEC GETTERS----------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "----------------------SET AVEC SETTERS----------------------" << RESET;
+	std::cout << BOLDMAGENTA << std::endl << "|                            &&                            |" << RESET;
+	std::cout << BOLDMAGENTA << std::endl << "----------------------GET AVEC GETTERS----------------------" << RESET << std::endl << std::endl;
 
 	array_overload.set_array(0, 78);
 	array_overload.set_array(1, 42);
@@ -56,26 +56,26 @@ int main()
 	std::cout << "get_array_overload[0]: " << BOLDGREEN << array_overload.get_array(0) << RESET << std::endl;
 	std::cout << "get_array_overload[1]: " << BOLDGREEN << array_overload.get_array(1) << RESET << std::endl;
 
-	std::cout << BOLDRED << std::endl << "--------------------ASSIGNATION OPERATOR--------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "--------------------ASSIGNATION OPERATOR--------------------" << RESET << std::endl << std::endl;
 
 	Array<int> array_copy;
 	
-	std::cout << YELLOW << "Copy" << std::endl;
+	std::cout << BOLDYELLOW << "Copy" << std::endl;
 
 	array_copy = array_overload;
 
-	std::cout << YELLOW << "Change value in copy to 123456" << std::endl;
+	std::cout << BOLDYELLOW << "Change value in copy to 123456" << std::endl;
 
 	array_copy.set_array(1, 123456);
 
-	std::cout << YELLOW << "Print in original AND in copy :" << RESET << std::endl;
+	std::cout << BOLDYELLOW << "Print in original AND in copy :" << RESET << std::endl;
 
 	std::cout << "Index[1] in original: "  << BOLDGREEN << array_overload.get_array(1) << RESET << std::endl;
 	std::cout << "Index[1] in copy:     "  << BOLDGREEN << array_copy.get_array(1) << RESET << std::endl << std::endl;
 
-	std::cout << BOLDRED << std::endl << "--------------------SET AVEC OPERATOR []--------------------" << RESET;
-	std::cout << BOLDRED << std::endl << "|                            &&                            |" << RESET;
-	std::cout << BOLDRED << std::endl << "--------------------GET AVEC OPERATOR []--------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "--------------------SET AVEC OPERATOR []--------------------" << RESET;
+	std::cout << BOLDMAGENTA << std::endl << "|                            &&                            |" << RESET;
+	std::cout << BOLDMAGENTA << std::endl << "--------------------GET AVEC OPERATOR []--------------------" << RESET << std::endl << std::endl;
 
 	try
 	{
@@ -123,7 +123,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
 	}
 
-	std::cout << BOLDRED << std::endl << "---------------------TESTS WITH STRINGS---------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "---------------------TESTS WITH STRINGS---------------------" << RESET << std::endl << std::endl;
 
 
 	Array<std::string> array_str(3);
@@ -157,7 +157,7 @@ int main()
         std::cout << BOLDRED << e.what() << RESET << std::endl;
 	}
 
-	std::cout << BOLDRED << std::endl << "--------------------------THE  END--------------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "--------------------------THE  END--------------------------" << RESET << std::endl << std::endl;
 
 	return (0);
 }

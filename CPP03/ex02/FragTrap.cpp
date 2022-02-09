@@ -58,5 +58,5 @@ FragTrap & FragTrap::operator=(FragTrap const & FragTrapACopier)
 
 void    FragTrap::highFivesGuys(void)
 {
-    std::cout << "High five guys!!" << std::endl;
+    std::cout << BOLDCYAN << "High five guys!!" << RESET << std::endl;
 }

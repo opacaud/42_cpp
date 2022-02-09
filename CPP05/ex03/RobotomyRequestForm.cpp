@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:01:34 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/27 13:25:40 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:29:53 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,10 @@ RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const &
 void	RobotomyRequestForm::execute (Bureaucrat const & executor) const
 {
 	Form::execute(executor);
-	std::cout << "BZBZZBZZZBZZZZZZ *PERCCCEUSSSSSSSSSE* BZBZZBZZZBZZZZZZ" << std::endl;
+	std::cout << BOLDGREEN << "BZBZZBZZZBZZZZZZ *PERCCCEUSSSSSSSSSE* BZBZZBZZZBZZZZZZ" << RESET << std::endl;
 	srand(time(0));
 	if (rand() % 2 == 0)
-		std::cout << m_target << " has been robotomized." << std::endl;
+		std::cout << BOLDGREEN << m_target << " has been robotomized." << RESET << std::endl;
 	else
-		std::cout << m_target << " has not been robotomized." << std::endl;
+		std::cout << BOLDGREEN << m_target << " has not been robotomized." << RESET << std::endl;
 }

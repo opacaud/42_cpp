@@ -12,24 +12,31 @@
 
 NAME =		point
 
-CC =		clang++
+OBJ_DIR =	obj
 
-FLAGS =		-Wall -Wextra -Werror -std=c++98
+CXX =		c++
 
-SRC =		Fixed.cpp Point.cpp bsp.cpp main.cpp
+CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
-OBJ =		${SRC:.cpp=.o}
+DEPFLAGS =	-MMD -MP
+
+SRC =		main.cpp Fixed.cpp Point.cpp bsp.cpp
+
+OBJ =		${addprefix ${OBJ_DIR}/,${SRC:.cpp=.o}}
+
+DEP =		${OBJ:.o=.d}
 
 all:		${NAME}
 
 ${NAME}:	${OBJ}
-			${CC} ${FLAGS} ${OBJ} -o ${NAME}
+			${CXX} ${CFLAGS} ${DEPFLAGS} ${OBJ} -o ${NAME}
 
-.cpp.o:
-			${CC} ${FLAGS} -c $< -o $@
+${OBJ_DIR}/%.o:%.cpp
+			@mkdir -p ${@D}
+			${CXX} ${CFLAGS} ${DEPFLAGS} -c $< -o $@
 
 clean:
-			rm -f ${OBJ}
+			rm -rf ${OBJ_DIR}
 
 fclean:		clean
 			rm -f ${NAME}
@@ -37,3 +44,5 @@ fclean:		clean
 re:			fclean all
 
 .PHONY :	all clean fclean re
+
+-include	${DEP}

@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:01:34 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/27 13:25:37 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:29:55 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,5 @@ PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonFor
 void	PresidentialPardonForm::execute (Bureaucrat const & executor) const
 {
 	Form::execute(executor);
-	std::cout << m_target << " has been graced by Zafod BeebleBrox." << std::endl;
+	std::cout << BOLDGREEN << m_target << " has been graced by Zafod BeebleBrox." << RESET << std::endl;
 }

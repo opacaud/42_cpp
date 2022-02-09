@@ -73,7 +73,7 @@ int Bureaucrat::getGrade() const
 
 void    Bureaucrat::upgrade()
 {
-    std::cout << BOLDCYAN << "upgrade function called." << RESET << std::endl;
+    std::cout << BOLDYELLOW << "upgrade function called." << RESET << std::endl;
     if (m_grade == 1)
     {
         throw Bureaucrat::GradeTooHighException();
@@ -86,7 +86,7 @@ void    Bureaucrat::upgrade()
 
 void    Bureaucrat::downgrade()
 {
-    std::cout << BOLDCYAN << "downgrade function called." << RESET << std::endl;
+    std::cout << BOLDYELLOW << "downgrade function called." << RESET << std::endl;
     if (m_grade == 150)
     {
         throw Bureaucrat::GradeTooLowException();

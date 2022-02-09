@@ -19,14 +19,14 @@
 
 int main()
 {
-	std::cout << BOLDGREEN << std::endl << "--------------MAIN TEST FROM SUBJECT--------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "--------------MAIN TEST FROM SUBJECT--------------" << RESET << std::endl << std::endl;
 
     Intern someRandomIntern;
     Form* rrf;
     rrf = someRandomIntern.makeForm("robotomy request", "Bender");
     delete rrf;
 
-	std::cout << BOLDGREEN << std::endl << "--------------------WRONG TEST--------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "--------------------WRONG TEST--------------------" << RESET << std::endl << std::endl;
 
     Intern  Slave;
     Form    *form;
@@ -34,7 +34,7 @@ int main()
     form = Slave.makeForm("what form", "Alpha");
     delete form;
 
-	std::cout << BOLDGREEN << std::endl << "-------------------BASIC  TESTS-------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "-------------------BASIC  TESTS-------------------" << RESET << std::endl << std::endl;
 
     form = Slave.makeForm("shrubbery creation", "Bravo");
     delete form;
@@ -43,7 +43,7 @@ int main()
     form = Slave.makeForm("presidential pardon", "Delta");
     delete form;
 
-	std::cout << BOLDGREEN << std::endl << "---------------------CHECKING---------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "---------------------CHECKING---------------------" << RESET << std::endl << std::endl;
 
     Bureaucrat LowLife("LowLife", 144);
     Bureaucrat LowLifePlus("LowLifePlus", 136);
@@ -56,7 +56,7 @@ int main()
     LowLifePlus.executeForm(*form);
     delete form;
 
-	std::cout << std::endl << "--------------------------------------------------------------------------------------------" << std::endl << std::endl;
+	std::cout << std::endl << "--------------------------------------------------" << std::endl << std::endl;
 
     Bureaucrat NormalGuy("NormalGuy", 71);
     Bureaucrat NormalGuyPlus("NormalGuyPlus", 44);
@@ -69,7 +69,7 @@ int main()
     NormalGuyPlus.executeForm(*form);
     delete form;
 
-	std::cout << std::endl << "--------------------------------------------------------------------------------------------" << std::endl << std::endl;
+	std::cout << std::endl << "--------------------------------------------------" << std::endl << std::endl;
 
     Bureaucrat AllMight("AllMight", 24);
     Bureaucrat AllMightPlus("AllMightPlus", 4);
@@ -82,7 +82,7 @@ int main()
     AllMightPlus.executeForm(*form);
     delete form;
 
-    std::cout << BOLDGREEN << std::endl << "---------------------THE  END---------------------" << RESET << std::endl << std::endl;
+    std::cout << BOLDMAGENTA << std::endl << "---------------------THE  END---------------------" << RESET << std::endl << std::endl;
     
     return (0);
 }

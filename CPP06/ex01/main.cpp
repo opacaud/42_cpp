@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:29:15 by opacaud           #+#    #+#             */
-/*   Updated: 2022/01/28 16:23:31 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:36:12 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ int main()
 	data_after->str = "I'm waitiiiiiiiing!!!!!";
 	raw = 0;
 
-	std::cout << "String in before struct: " << data_before->str << std::endl;
-	std::cout << "String in after struct: " << data_after->str << std::endl;
+	std::cout << std::endl << BOLDGREEN << "String in before struct: " << data_before->str << RESET << std::endl;
+	std::cout << "String in after struct:  " << data_after->str << std::endl;
 	raw = serialize(data_before);
 	data_after->str = deserialize(raw)->str;
-	std::cout << "String in after struct: " << data_after->str << std::endl;
+	std::cout << BOLDGREEN << "String in after struct:  " << data_after->str << RESET << std::endl << std::endl;
+
+	std::cout << BOLDMAGENTA << "No loss of information!" << RESET << std::endl << std::endl;
 
 	delete data_after;
 	delete data_before;

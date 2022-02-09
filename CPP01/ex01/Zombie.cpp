@@ -28,14 +28,14 @@ Zombie::Zombie( std::string name )
 Zombie::~Zombie()
 {
     // std::cout << BOLDBLUE << "Destructor for Zombie called." << RESET << std::endl;
-    std::cout << m_name << " DyiiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << m_name << BOLDRED << " DyiiiiiiiinnnzzzZ..." << RESET << std::endl;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
 void    Zombie::announce( void )
 {
-    std::cout << m_name << " BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << m_name << BOLDGREEN << " BraiiiiiiinnnzzzZ..." << RESET << std::endl;
 }
 
 void    Zombie::ft_set_name ( std::string name, int number )

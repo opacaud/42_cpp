@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 15:25:55 by opacaud           #+#    #+#             */
-/*   Updated: 2022/02/03 15:43:15 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 12:17:47 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,18 @@ void	Phonebook::ft_add_contact(int *nb_contacts)
     std::string	secret;
 
 	if (*nb_contacts == 8)
-		std::cout << std::endl << "Your phonebook is full. You are only allowed eight contacts." << std::endl;
+		std::cout << std::endl << BOLDRED << "Your phonebook is full. You are only allowed eight contacts." << RESET << std::endl;
 	else
 	{
-		std::cout << std::endl << "What's your new contact's first name? ";
+		std::cout << std::endl << BOLDMAGENTA << "What's your new contact's first name? " << RESET;
 		std::getline (std::cin, f_name);
-		std::cout << "What's your new contact's last name? ";
+		std::cout << BOLDMAGENTA << "What's your new contact's last name? " << RESET;
 		std::getline (std::cin, l_name);
-		std::cout << "What's your new contact's nickname? ";
+		std::cout << BOLDMAGENTA << "What's your new contact's nickname? " << RESET;
 		std::getline (std::cin, nickname);
-		std::cout << "What's your new contact's phone number? ";
+		std::cout << BOLDMAGENTA << "What's your new contact's phone number? " << RESET;
 		std::getline (std::cin, number);
-		std::cout << "What's your new contact's darkest secret? ";
+		std::cout << BOLDMAGENTA << "What's your new contact's darkest secret? " << RESET;
 		std::getline (std::cin, secret);
 		m_contact_tab[(*nb_contacts)].ft_set_f_name(f_name);
 		m_contact_tab[(*nb_contacts)].ft_set_l_name(l_name);
@@ -71,7 +71,7 @@ void	ft_print_list(Contact contact_tab[], int nb_contacts)
 {
 	int	i;
 
-    std::cout << std::endl << "     index|first name| last name|  nickname|" << std::endl;
+    std::cout << std::endl << BOLDWHITE << "     index|first name| last name|  nickname|" << RESET << std::endl;
 	i = 1;
 	while (i <= nb_contacts && i < 9)
 	{
@@ -98,16 +98,16 @@ void    Phonebook::ft_search_contact(int nb_contacts)
     std::string	search_index;
 
 	if (nb_contacts == 0)
-		std::cout << std::endl << "No contact to show." << std::endl;
+		std::cout << std::endl << BOLDRED << "No contact to show." << RESET << std::endl;
 	else
 	{
 		while (1)
 		{
 			ft_print_list(Phonebook::m_contact_tab, nb_contacts);
-			std::cout << std::endl << "What is the index of the contact you are searching for? ";
+			std::cout << std::endl << BOLDCYAN << "What is the index of the contact you are searching for? " << RESET;
 			std::getline (std::cin, search_index);
 			if (ft_isnum(search_index) == 0 || ft_atoi(search_index) >= nb_contacts)
-				std::cout << std::endl << "---> Please enter a number that is assigned to a contact down here:" << std::endl;
+				std::cout << std::endl << BOLDRED << "---> Please enter a number that is assigned to a contact down here:" << RESET << std::endl;
 			else
 			{
 				ft_print_contact(Phonebook::m_contact_tab, ft_atoi(search_index));

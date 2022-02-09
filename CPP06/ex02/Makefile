@@ -14,13 +14,13 @@ NAME =		type
 
 OBJ_DIR =	obj
 
-CXX =		clang++
+CXX =		c++
 
 CFLAGS =	-Wall -Wextra -Werror -std=c++98
 
 DEPFLAGS =	-MMD -MP
 
-SRC =		Base.cpp main.cpp
+SRC =		main.cpp Base.cpp
 
 OBJ =		${addprefix ${OBJ_DIR}/,${SRC:.cpp=.o}}
 

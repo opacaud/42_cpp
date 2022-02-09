@@ -42,7 +42,7 @@ Fixed & Fixed::operator=(Fixed const & fixedACopier)
 
 int     Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
+    std::cout << BOLDYELLOW << "getRawBits member function called" << RESET << std::endl;
     return (m_fixed_value);
 }
 

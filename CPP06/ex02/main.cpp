@@ -36,21 +36,21 @@ void identify_p(Base * p)
     cmp = dynamic_cast<A *>(p);
     if (cmp)
     {
-        std::cout << "Base is type A." << std::endl;
+        std::cout << BOLDCYAN << "Base is type A." << RESET << std::endl;
         return ;
     }
 
     cmp = dynamic_cast<B *>(p);
     if (cmp)
     {
-        std::cout << "Base is type B." << std::endl;
+        std::cout << BOLDBLUE << "Base is type B." << RESET << std::endl;
         return ;
     }
 
     cmp = dynamic_cast<C *>(p);
     if (cmp)
     {
-        std::cout << "Base is type C." << std::endl;
+        std::cout << BOLDMAGENTA << "Base is type C." << RESET << std::endl;
         return ;
     }
 }
@@ -96,11 +96,11 @@ void identify_r(Base & p)
     }
 
     if (is_a)
-        std::cout << "Base is type A." << std::endl;
+        std::cout << BOLDCYAN << "Base is type A." << RESET << std::endl;
     else if (is_b)
-        std::cout << "Base is type B." << std::endl;
+        std::cout << BOLDBLUE << "Base is type B." << RESET << std::endl;
     else if (is_c)
-        std::cout << "Base is type C." << std::endl;
+        std::cout << BOLDMAGENTA << "Base is type C." << RESET << std::endl;
 }
 
 int main()
@@ -108,6 +108,11 @@ int main()
     Base    *test;
 
     test = generate();
+
+    std::cout << std::endl;
+
     identify_p(test);
     identify_r(*test);
+
+    std::cout << std::endl << BOLDGREEN << "Run it again and again. Type should change randomly." << RESET << std::endl << std::endl;
 }

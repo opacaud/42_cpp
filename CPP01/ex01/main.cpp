@@ -32,7 +32,7 @@ int main()
         i++;
     }
 
-    std::cout << std::endl << "--------------- GRENADE ---------------" << std::endl << std::endl;
+    std::cout << std::endl << BOLDCYAN << "-------------------- GRENADE --------------------" << RESET << std::endl << std::endl;
 
     delete [] horde;
 

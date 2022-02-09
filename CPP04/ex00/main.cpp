@@ -6,7 +6,7 @@
 /*   By: opacaud <opacaud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 16:20:59 by opacaud           #+#    #+#             */
-/*   Updated: 2022/02/03 14:33:24 by opacaud          ###   ########.fr       */
+/*   Updated: 2022/02/09 17:07:53 by opacaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 
 int main()
 {
-	std::cout << std::endl << RED << "---------------MAIN DU SUJET---------------" << RESET << std::endl << std::endl;
+	std::cout << std::endl << BOLDMAGENTA << "-------------------MAIN FROM SUBJECT-------------------" << RESET << std::endl << std::endl;
 
+	std::cout << MAGENTA << "WHEN THE ANIMAL CLASS HAS A VIRTUAL MAKESOUND FUNCTION" << RESET << std::endl;
+	std::cout << MAGENTA << "                       with new                       " << RESET << std::endl << std::endl;
 	const Animal* meta_new = new Animal();
 	const Animal* i_new = new Cat();
 	const Animal* j_new = new Dog();
@@ -31,8 +33,10 @@ int main()
 	i_new->makeSound();	// will output the cat sound!
 	j_new->makeSound();
 
-	std::cout << RED << std::endl << "---------------AUTRES  TESTS---------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "----------------------OTHER TESTS----------------------" << RESET << std::endl << std::endl;
 
+	std::cout << MAGENTA << "WHEN THE ANIMAL CLASS HAS A VIRTUAL MAKESOUND FUNCTION" << RESET << std::endl;
+	std::cout << MAGENTA << "                     without  new                     " << RESET << std::endl << std::endl;
 	Animal	animal;
 	Cat		cat;
 	Dog		dog;
@@ -44,7 +48,9 @@ int main()
 	cat.makeSound();
 	dog.makeSound();
 
-	std::cout << RED << std::endl << "----------------WRONG TESTS----------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "------------------------WRONG TESTS------------------------" << RESET << std::endl << std::endl;
+
+	std::cout << MAGENTA << "WHEN THE ANIMAL CLASS HAS NOT A VIRTUAL MAKESOUND FUNCTION" << RESET << std::endl << std::endl;
 
 	const WrongAnimal* meta_wrong_new = new WrongAnimal();
 	const WrongAnimal* i_wrong_new = new WrongCat();
@@ -54,7 +60,7 @@ int main()
 	meta_wrong_new->makeSound();
 	i_wrong_new->makeSound();	// will not output the cat sound!
 
-	std::cout << RED << std::endl << "------------------THE END------------------" << RESET << std::endl << std::endl;
+	std::cout << BOLDMAGENTA << std::endl << "------------------THE END------------------" << RESET << std::endl << std::endl;
 
 	delete meta_new;
 	delete i_new;
