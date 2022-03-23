@@ -1,6 +1,6 @@
-# 42_cpp
+# Project 09: 42_cpp
 
-## Project 09: An introduction to C++ language after months of learning C and its features, through small exercises.
+## An introduction to C++ language after months of learning C and its features, through small exercises.
 
 Each folder is a module about one new key aspect of C++.
 Each module is several small exercises, increasing in difficulty.
